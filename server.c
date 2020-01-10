@@ -22,6 +22,8 @@ int newfd = 0;
 int t_bind = 0;
 int number = 0;
 
+
+
 char buf[1024] = {};
 char ipv4_addr[16] = {};
 
@@ -59,7 +61,7 @@ int main(int argc, char const* argv[]) {
     puts("");
 
     while (1) {
-        if ((newfd = accept(fd, NULL, NULL)) < 0) {
+        if ((newfd = accept(fd,(struct sockaddr*)&cin, &addrlen)) < 0) {
             perror("Accept");
             exit(-1);
         }  //开始接收阻塞态
