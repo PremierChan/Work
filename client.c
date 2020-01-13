@@ -6,10 +6,11 @@
 #include <arpa/inet.h>
 #include <string.h>
 #include <pthread.h>
+#include <unistd.h>
 
 #if 0  //其他用户
-#define SERV_PORT
-#define SERV_IP_ADDR ""
+#define SERV_PORT 5020
+#define SERV_IP_ADDR "192.168.3.116"
 #else  //缺省设置
 #define SERV_PORT 5001
 #define SERV_IP_ADDR "192.168.3.113"
