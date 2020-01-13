@@ -21,7 +21,7 @@ int main(int argc, char *argv[])
 
 	int port = SERV_PORT;
 	port = atoi(argv[2]);
-	if((port<5001)&&(port>65535))
+	if((port<5001)||(port>65535))
 	{
 		puts("端口非法！");
 		exit(1);
